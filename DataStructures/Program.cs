@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace DataStructures
 {
@@ -6,42 +9,20 @@ namespace DataStructures
     {
         static void Main(string[] args)
         {
-            var array = new Array<int>(5);
-            array.Insert(1);
-            array.Insert(2);
-            array.Insert(3);
-            array.Insert(4);
-            array.Insert(5);
-            array.Insert(6);
-            array.Insert(1);
-            array.Insert(2);
-            array.Insert(3);
-            array.Insert(4);
-            array.Insert(5);
-            array.Insert(6);
-            array.Insert(7);
-            Console.WriteLine(array);
-            Console.WriteLine(array.Size());
-            Console.WriteLine(array.Capacity);
-            array.RemoveAtIndex(6);
-            array.RemoveAtIndex(11);
-            Console.WriteLine(array);
-            Console.WriteLine(array.Size());
-            Console.WriteLine(array.Capacity);
-            array.RemoveAtIndex(1);
-            array.RemoveAtIndex(1);
-            array.RemoveAtIndex(1);
-            array.RemoveAtIndex(1);
-            Console.WriteLine(array);
-            Console.WriteLine(array.Size());
-            Console.WriteLine(array.Capacity);
-            Console.WriteLine(array.LastIndexOf(12));
-            Console.WriteLine(array.Find(a => a == 5));
-            array.ForEach((ole) =>
+        }
+
+        public static void Display<T>(List<T> list)
+        {
+            var length = list.Count;
+            Console.Write("[");
+            for (var i = 0; i < length - 1; i++)
             {
-                Console.WriteLine(ole);
-            });
-            Console.WriteLine(array.Contains(7));
+                Console.Write($"{list[i]}, ");
+            }
+            if (length == 0)
+                Console.WriteLine("]");
+            else
+                Console.WriteLine($"{list[length - 1]}]");
         }
     }
 }
