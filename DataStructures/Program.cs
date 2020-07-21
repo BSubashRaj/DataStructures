@@ -1,6 +1,5 @@
 ﻿
 using System;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace DataStructures
@@ -9,7 +8,6 @@ namespace DataStructures
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!!!");
         }
 
         public static void Display<T>(List<T> list)
